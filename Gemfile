@@ -56,3 +56,5 @@ end
 group :development, :test do
   gem 'sqlite3'
 end
+ruby '3.4.1'
+
