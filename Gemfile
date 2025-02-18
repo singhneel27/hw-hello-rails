@@ -54,7 +54,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4'
 end
 ruby '3.4.1'
 
