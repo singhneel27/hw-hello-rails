@@ -3,7 +3,15 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
+    # Default sorting criteria
+    sort_column = params[:sort] || 'title'
+    sort_direction = params[:direction] || 'asc'
+
+    # Validate sorting direction to be 'asc' or 'desc'
+    sort_direction = ['asc', 'desc'].include?(sort_direction) ? sort_direction : 'asc'
+
+    # Get the movies sorted by the given criteria
+    @movies = Movie.order("#{sort_column} #{sort_direction}")
   end
 
   # GET /movies/1 or /movies/1.json
@@ -60,11 +68,11 @@ class MoviesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
-      @movie = Movie.find(params.expect(:id))
+      @movie = Movie.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.expect(movie: [ :title, :rating, :description, :release_date ])
+      params.require(:movie).permit(:title, :rating, :description, :release_date)
     end
 end
