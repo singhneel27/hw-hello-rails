@@ -2,171 +2,189 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a lifted effect */
-    border-radius: 8px;
-    overflow: hidden; /* For rounded corners to be visible */
-  }
-  
-  /* Header Styling */
-  thead {
-    background-color: #4CAF50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fcfcfa;
+}
+
+/* Header Styling */
+thead {
+    background: linear-gradient(135deg, #3A5A40, #2F3E2E); /* Deep green gradient */
     color: white;
     text-transform: uppercase;
-  }
-  
-  th {
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
+}
+
+th {
+    padding: 14px 22px;
+    font-size: 15px;
+    font-weight: bold;
     text-align: center;
-  }
-  
-  th.sorted {
-    background-color: #d3e3fc;
-    font-weight: 700;
-  }
-  
-  /* Body Styling */
-  tbody {
-    background-color: #fff;
-  }
-  
-  tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  tbody tr:hover {
-    background-color: #f1f1f1;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  td {
-    padding: 12px 15px;
+}
+
+/* Body Styling */
+tbody tr:nth-child(odd) {
+    background-color: #f5f5f0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #ECE4B7; /* Warm gold hover */
+    transition: background-color 0.3s ease;
+}
+
+td {
+    padding: 14px 18px;
     text-align: left;
     font-size: 14px;
     color: #333;
-  }
-  
-  /* Sorting Indicators */
-  th.asc-sort {
-    color: #28a745; /* Green for ascending */
-  }
-  
-  th.desc-sort {
-    color: #dc3545; /* Red for descending */
-  }
-  
-  th.sorted .icon {
-    font-size: 18px;
-    margin-left: 8px;
-  }
-  
-  th.sorted .icon:before {
-    content: " 🔽"; /* Default to descending arrow */
-  }
-  
-  th.asc-sort .icon:before {
-    content: " 🔼"; /* Ascending arrow */
-  }
-  
-  th.desc-sort .icon:before {
-    content: " 🔽"; /* Descending arrow */
-  }
-  
-  /* Action Buttons Styling */
-  .actions a {
-    padding: 8px 16px;
-    margin: 5px;
-    border-radius: 5px;
+}
+
+/* Sorting Indicators */
+th.sorted {
+    background-color: #dcdcdc;
+    font-weight: 700;
+}
+
+th.asc-sort {
+    color: #3A5A40; /* Deep green for ascending */
+}
+
+th.desc-sort {
+    color: #B22222; /* Brick red for descending */
+}
+
+th.sorted .icon {
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+th.sorted .icon:before {
+    content: " 🔽"; /* Default descending */
+}
+
+th.asc-sort .icon:before {
+    content: " 🔼"; /* Ascending */
+}
+
+/* Action Buttons Styling */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.actions a {
+    padding: 10px 18px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    transition: all 0.3s ease;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
-  }
-  
-  .actions .show_button {
-    background-color: #4CAF50;
+}
+
+.actions .show_button {
+    background: linear-gradient(135deg, #3A5A40, #2F3E2E);
     color: white;
-  }
-  
-  .actions .edit_button {
-    background-color: #FFA500;
+}
+
+.actions .edit_button {
+    background: linear-gradient(135deg, #C28523, #9E6A1F);
     color: white;
-  }
-  
-  .actions .delete_button {
-    background-color: #F44336;
+}
+
+.actions .delete_button {
+    background: linear-gradient(135deg, #B22222, #8B1E1E);
     color: white;
-  }
-  
-  .actions .new_button {
-    background-color: #008CBA;
+}
+
+.actions .new_button {
+    background: linear-gradient(135deg, #85724B, #5E4B33);
     color: white;
-  }
-  
-  .actions a:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.actions a:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
-  }
-  
-  .actions a:active {
-    transform: translateY(1px); /* Slight push effect when clicked */
-  }
-  
-  /* For better spacing and structure */
-  table, th, td {
+}
+
+.actions a:active {
+    transform: translateY(2px);
+}
+
+/* Table Borders and Alignment */
+table, th, td {
     border: 1px solid #ddd;
-  }
-  
-  td {
+}
+
+td {
     text-align: center;
-  }
-  
-  /* Form Elements Styling (for consistency with tables) */
-  .input-field, .form-group input, .form-group textarea, .form-group select {
+}
+
+/* Form Elements Styling */
+.input-field,
+.form-group input,
+.form-group textarea,
+.form-group select {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 12px;
+    margin: 6px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 14px;
-  }
-  
-  .submit-button {
-    background-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus,
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #3A5A40;
+    box-shadow: 0 0 8px rgba(58, 90, 64, 0.3);
+}
+
+/* Submit Button */
+.submit-button {
+    background: linear-gradient(135deg, #3A5A40, #2F3E2E);
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 6px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:hover {
-    background-color: #45a049;
-  }
-  
-  .submit-button:active {
-    background-color: #388e3c;
-  }
-  
-  /* Error Message Styling */
-  #error_explanation {
-    background-color: #f8d7da;
-    color: #721c24;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #2F3E2E;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    background: #1E2A1B;
+    transform: translateY(1px);
+}
+
+/* Error Message Styling */
+#error_explanation {
+    background-color: #FAE3E3;
+    color: #8B1E1E;
     padding: 15px;
     margin: 15px 0;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 14px;
-  }
-  
-  #error_explanation ul {
+}
+
+#error_explanation ul {
     margin: 0;
     padding-left: 20px;
-  }
-  
-  #error_explanation li {
+}
+
+#error_explanation li {
     list-style-type: disc;
-  }
-  
+}
