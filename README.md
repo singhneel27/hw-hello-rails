@@ -1,48 +1,77 @@
-# README
+# Rotten Potatoes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains the Rotten Potatoes application, a movie review platform built using Ruby on Rails.
 
-* Application link:
+## Application Link
 https://rottenpotatoesns-835a2dba8950.herokuapp.com/
 
-* Ruby version
-The application uses 3.4.1 version, check the ruby version using `ruby -v` command.
-* Rails version
-The application uses 8.0.1 Rails version, check the version using `rails -v` command. If no rails, run `gem install rails`
-* System dependencies
-Before running the application, make sure you have the following system dependencies:
+## Prerequisites
+Before running the application, ensure you have the following installed:
 
-Ruby (version 3.4.1)
-Rails (version 8.0.1)
-A database system such as PostgreSQL, MySQL, or SQLite (SQLite is default for development)
-Make sure you have these installed on your system.
-* Configuration
-Make sure your database is configured in config/database.yml for the environment you’re working in (development, test, or production).
-* Database creation
-Create and set up the database by running the following commands:
+### System Dependencies
+- **Ruby** (Version 3.4.1) - Check your Ruby version using:
+  ```sh
+  ruby -v
+  ```
+  If Ruby is not installed, download it from [ruby-lang.org](https://www.ruby-lang.org/).
+
+- **Rails** (Version 8.0.1) - Verify your Rails version using:
+  ```sh
+  rails -v
+  ```
+  If Rails is not installed, run:
+  ```sh
+  gem install rails
+  ```
+
+- **Database System**: The application supports **PostgreSQL, MySQL, or SQLite** (SQLite is used by default for development).
+
+## Configuration
+Ensure your database is properly configured in `config/database.yml` based on the environment (development, test, or production).
+
+## Setup Instructions
+### 1. Clone the Repository
+```sh
+git clone https://github.com/singhneel27/hw-hello-rails.git
+cd hw-hello-rails
+```
+
+### 2. Install Dependencies
+```sh
+bundle install
+```
+
+### 3. Database Setup
+#### Create the Database
+```sh
 bin/rails db:create
-This will create the necessary databases for your application.
-* Database initialization
-If you need to populate the database with some initial data, you can run the seed file with:
-bin/rails db:seed
-This will load default records into your database, such as movies with title, rating, and release date.
+```
+This will generate the necessary databases.
 
-* Project setup:
-Clone repository:
-'git clone https://github.com/singhneel27/hw-hello-rails.git'
-### Dependencies
-* Install dependencies using `bundle install`
+#### Apply Migrations
+```sh
+rails db:migrate
+```
 
-### Database creation
+#### Seed the Database
+If you need to populate the database with default records (e.g., movies with titles, ratings, and release dates), run:
+```sh
+rails db:seed
+```
 
-* Apply the migration to the database using command `rails db:migrate`
-* Seed the database with initial data using command `rails db:seed`
+## Running the Application
+Start the Rails server using:
+```sh
+rails server
+```
+By default, the server will be hosted at:
+```
+http://127.0.0.1:3000
+```
 
-### Execution
+## Contributing
+Feel free to submit issues and pull requests to improve this project.
 
-* Run the server using the command `rails server`, this hosts the server on `http://127.0.0.1` on port `3000`
+---
+### Repository: hw-hello-rails
 
-
-
-# hw-hello-rails
