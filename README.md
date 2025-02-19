@@ -2,7 +2,7 @@
 
 This repository contains the Rotten Potatoes application, a movie review platform built using Ruby on Rails.
 
-## Application Link
+## Application Link:
 https://rottenpotatoesns-835a2dba8950.herokuapp.com/
 
 ## Prerequisites
