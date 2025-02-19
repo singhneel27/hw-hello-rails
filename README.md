@@ -44,5 +44,5 @@ Clone repository:
 * Run the server using the command `rails server`, this hosts the server on `http://127.0.0.1` on port `3000`
 
 
-* ...
+
 # hw-hello-rails
