@@ -1,30 +1,36 @@
 /* General Table Styling */
 table {
     width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    background-color: #fcfcfa;
 }
 
 /* Header Styling */
 thead {
-    background: linear-gradient(135deg, #3A5A40, #2F3E2E); /* Deep green gradient */
+    background: linear-gradient(135deg, #444, #222);
     color: white;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 th {
-    padding: 14px 22px;
+    padding: 16px;
     font-size: 15px;
-    font-weight: bold;
-    text-align: center;
+    font-weight: 600;
+    text-align: left;
 }
 
 /* Body Styling */
+tbody tr {
+    transition: all 0.3s ease;
+}
+
 tbody tr:nth-child(odd) {
-    background-color: #f5f5f0;
+    background-color: #f9f9f9;
 }
 
 tbody tr:nth-child(even) {
@@ -32,54 +38,43 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #ECE4B7; /* Warm gold hover */
-    transition: background-color 0.3s ease;
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 td {
-    padding: 14px 18px;
-    text-align: left;
+    padding: 14px;
     font-size: 14px;
     color: #333;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Sorting Indicators */
 th.sorted {
-    background-color: #dcdcdc;
-    font-weight: 700;
-}
-
-th.asc-sort {
-    color: #3A5A40; /* Deep green for ascending */
-}
-
-th.desc-sort {
-    color: #B22222; /* Brick red for descending */
-}
-
-th.sorted .icon {
-    font-size: 16px;
-    margin-left: 6px;
-}
-
-th.sorted .icon:before {
-    content: " 🔽"; /* Default descending */
+    background-color: #555;
+    font-weight: bold;
 }
 
 th.asc-sort .icon:before {
-    content: " 🔼"; /* Ascending */
+    content: " \2191";
+}
+
+th.desc-sort .icon:before {
+    content: " \2193";
 }
 
 /* Action Buttons Styling */
 .actions {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .actions a {
-    padding: 10px 18px;
-    border-radius: 6px;
+    padding: 10px 16px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -88,42 +83,32 @@ th.asc-sort .icon:before {
 }
 
 .actions .show_button {
-    background: linear-gradient(135deg, #3A5A40, #2F3E2E);
+    background: #0275d8;
     color: white;
 }
 
 .actions .edit_button {
-    background: linear-gradient(135deg, #C28523, #9E6A1F);
+    background: #f0ad4e;
     color: white;
 }
 
 .actions .delete_button {
-    background: linear-gradient(135deg, #B22222, #8B1E1E);
+    background: #d9534f;
     color: white;
 }
 
 .actions .new_button {
-    background: linear-gradient(135deg, #85724B, #5E4B33);
+    background: #5cb85c;
     color: white;
 }
 
 .actions a:hover {
-    transform: translateY(-3px);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .actions a:active {
-    transform: translateY(2px);
-}
-
-/* Table Borders and Alignment */
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-td {
-    text-align: center;
+    transform: translateY(1px);
 }
 
 /* Form Elements Styling */
@@ -136,7 +121,6 @@ td {
     margin: 6px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box;
     font-size: 14px;
     transition: all 0.3s ease;
 }
@@ -145,13 +129,13 @@ td {
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: #3A5A40;
-    box-shadow: 0 0 8px rgba(58, 90, 64, 0.3);
+    border-color: #0275d8;
+    box-shadow: 0 0 8px rgba(2, 117, 216, 0.3);
 }
 
 /* Submit Button */
 .submit-button {
-    background: linear-gradient(135deg, #3A5A40, #2F3E2E);
+    background: #0275d8;
     color: white;
     padding: 12px 30px;
     border-radius: 6px;
@@ -161,19 +145,19 @@ td {
 }
 
 .submit-button:hover {
-    background: #2F3E2E;
+    background: #025aa5;
     transform: translateY(-2px);
 }
 
 .submit-button:active {
-    background: #1E2A1B;
+    background: #01447e;
     transform: translateY(1px);
 }
 
 /* Error Message Styling */
 #error_explanation {
-    background-color: #FAE3E3;
-    color: #8B1E1E;
+    background-color: #ffebee;
+    color: #b71c1c;
     padding: 15px;
     margin: 15px 0;
     border-radius: 6px;
