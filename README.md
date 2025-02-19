@@ -3,7 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+* Application link:
+https://rottenpotatoesns-835a2dba8950.herokuapp.com/
 
 * Ruby version
 The application uses 3.4.1 version, check the ruby version using `ruby -v` command.
