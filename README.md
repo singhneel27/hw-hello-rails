@@ -26,11 +26,22 @@ This will create the necessary databases for your application.
 If you need to populate the database with some initial data, you can run the seed file with:
 bin/rails db:seed
 This will load default records into your database, such as movies with title, rating, and release date.
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+To deploy this application to Heroku (or any platform), follow these steps:
+1. Install the Heroku CLI (if not already installed).
+
+2. Create a new Heroku application:
+heroku create your-app-name
+3. Add a PostgreSQL database (if using PostgreSQL):
+heroku addons:create heroku-postgresql:hobby-dev
+4. Deploy to Heroku:
+git push heroku master
+5. Run migrations on Heroku:
+heroku run bin/rails db:migrate
+6. Open the application:
+heroku open
+
 
 * ...
 # hw-hello-rails
